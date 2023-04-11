@@ -1,0 +1,42 @@
+04.11 12:37 PM
+<?xml version="1.0"?>
+<xsl:stylesheet version="1.0"
+xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+<xsl:template match="/">
+<html> 
+<body>
+
+ 
+
+<table border="1" style ="font-size:15px">
+<tr  display: block; float: left; >
+
+ 
+
+<th display=block><b>Frequency</b></th>
+<th display=block><b>Due Date </b></th>
+<th display=block><b>Duration</b></th>
+<th display=block><b>Pm LoS</b></th>
+<th display=block><b>Remote</b></th>
+<th display=block><b>Entitlement Hours</b></th>
+<th display=block><b>Entitlement End</b></th>
+</tr>
+<xsl:for-each select="catalog/cd">
+<tr>
+<td style="text-align:center" display=block><xsl:value-of select="frequency"/></td>
+<td style="text-align:center" display=block><xsl:value-of select="due_date"/></td>
+<td style="text-align:center" display=block><xsl:value-of select="duration"/></td>
+<td style="text-align:center" display=block><xsl:value-of select="pm_los"/></td>
+<td style="text-align:center" display=block><xsl:value-of select="remote"/></td>
+<td style="text-align:center" display=block><xsl:value-of select="ent_hours"/></td>
+<td style="text-align:center" display=block><xsl:value-of select="ent_end"/></td
+
+ 
+
+</tr>
+</xsl:for-each>
+</table>
+</body>
+</html>
+</xsl:template>
+</xsl:stylesheet>
